@@ -1,0 +1,146 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background:url(/myApp/img/back.jpg)center center no-repeat;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+
+}
+.hero h1{
+color: aliceblue;
+font-weight: 500;
+margin-bottom: 40px;
+
+}
+
+.signup-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    max-width: 800 px;
+    background: rgb(3, 109, 125);;
+}
+
+.left-box {
+    flex-basis: 50%;
+    flex-grow: 1;
+    color: rgb(193, 226, 237);
+    padding: 50px;
+    background: rgb(0, 70, 81);
+}
+.right-box{
+    padding: 50px;
+    flex-basis: 50%;
+    flex-grow: 1;
+
+}
+.input-box{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid aliceblue;
+    outline: none;
+    color: aliceblue;
+    background: transparent;
+
+}
+::placeholder{
+    color: aliceblue;
+}
+input[type=checkbox]{
+    margin-top: 30px;
+
+}
+.left-box label{
+    font-size: 14px;
+}
+.left-box button{
+    width:100%;
+    background: aliceblue;
+    padding: 10px;
+    border: 0;
+    outline:none;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-box button hover{
+    font-weight: 500;
+    background: black;
+    color: rgb(255, 240, 240);
+
+}
+
+
+.right-box a{
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    min-width: 250px;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 15px 30px;
+    text-decoration: none;
+    
+
+}
+.right-box a i{
+    margin-right: 10px;
+    font-size: 18px;
+
+}
+.fb-link{
+    background-color: #177af2c6;
+    
+}
+.g-link{
+    background-color: #ea4435ee;
+}
+.gh-link{
+    background-color: #353a3b;
+
+}
+.login-msg a{
+    
+    color: #76b3ff;
+    text-decoration: none;
+}
+.login-msg{
+    color: aliceblue;
+}
+
+
+@media (min-width:768px) and (max-width:991px){
+    .signup-box{
+        width: 50%;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+    .signup-box{
+        width: 60%;
+    }
+}
+
+@media (min-width:575px) {
+    .signup-box{
+        width: 70%;
+    }
+}
