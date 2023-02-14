@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState,useEffect  } from "react";
+
+import axios from "axios";
+
 
 export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
-    const [name, setName] = useState('');
+    const [username, setName] = useState('');
     const [number, setNumber] = useState('');
 
+    useEffect(()=>{
 
+        axios.get("https://jsonplaceholder.typicode.com/users")
+        .then(res=> setEmail(res.data[username].email ))
+        .catch (err=>console.log(err))
+        },[email,username])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,8 +25,8 @@ export const Register = (props) => {
         <div className="auth-form-container">
             <h2>Register</h2>
         <form className="register-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Username</label>
-            <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Username" />
+            <label htmlFor="username">Username</label>
+            <input value={username} name="username" onChange={(e) => setName(e.target.value)} id="username" placeholder="Username" />
             
             <label htmlFor="number">Phone Number</label>
             <input value={number} onChange={(e) => setNumber(e.target.value)}type="text" placeholder="(___)___-_____ " id="number" name="number" />
