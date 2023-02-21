@@ -7,11 +7,13 @@
   justify-content: center;
   color: white;
   background-image: linear-gradient(79deg, #7439db, #C66FBC 48%, #F7944D);
+  
 }
 
 .auth-form-container, .login-form, .register-form {
   display: flex;
   flex-direction: column;
+
 }
 
 @media screen and (min-width: 600px) {
@@ -20,12 +22,14 @@
     border: 1px solid white;
     border-radius: 10px;
     margin: 0.5rem;
+    
   }
 }
 
 label {
   text-align: left;
   padding: 0.25rem 0;
+  
 }
 
 input {
@@ -33,6 +37,7 @@ input {
   padding: 1rem;
   border: none;
   border-radius: 10px;
+  box-shadow: 0px 0 px 20 px 10px #ffffff;
 }
 
 button {
@@ -42,10 +47,12 @@ button {
   border-radius: 10px;
   cursor: pointer;
   color: #7439db;
+
 }
 
 .link-btn {
   background: none;
   color: white;
   text-decoration: underline;
+
 }
