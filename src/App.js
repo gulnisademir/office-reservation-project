@@ -4,7 +4,7 @@ import './App.css';
 import { Login } from "./Login";
 import { Register } from "./Register";
 
-
+import Users from "./Users";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -21,7 +21,11 @@ function App() {
       {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       }
-     
+      
+      <hr/>
+      <Users/>
+        
+      
 
 
 

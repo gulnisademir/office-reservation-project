@@ -9,12 +9,7 @@ export const Register = (props) => {
     const [username, setName] = useState('');
     const [number, setNumber] = useState('');
 
-    useEffect(()=>{
-
-        axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(res=> setEmail(res.data[username].email ))
-        .catch (err=>console.log(err))
-        },[email,username])
+ 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -39,6 +34,7 @@ export const Register = (props) => {
             <button type="submit">Sign Up</button>
         </form>
         <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button>
+       
     </div>
     )
 }
