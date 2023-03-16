@@ -1,147 +1,134 @@
 import React from "react";
 
-import {
-  Button,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
-
-
-
+import { Button, Container, Row, Col } from "reactstrap";
 
 export default function Table() {
-
   // const container = document.querySelector('.container');
 
+  //   container.addEventListener('click', function(e) {
+  //     if(e.target.classList.contains('seat') && !e.target.classList.contains('reserved')) {
+  //         e.target.classList.toggle('selected');
+  //         calculateTotal()
 
-//   container.addEventListener('click', function(e) {
-//     if(e.target.classList.contains('seat') && !e.target.classList.contains('reserved')) {
-//         e.target.classList.toggle('selected');
-//         calculateTotal()     
-
-//         let selectedSeatCount = container.querySelectorAll('.seat.selected').length;
-//         console.log(selectedSeatCount);
-//      }
-//  });
-
+  //         let selectedSeatCount = container.querySelectorAll('.seat.selected').length;
+  //         console.log(selectedSeatCount);
+  //      }
+  //  });
 
   return (
     <div className="box2">
       <Container>
-      <Row>
-        <Col>
-          <Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat reserved"></div>
-            </Col>
-
+        <Row>
+          <Col>
             <Row>
               <Col>
-                <Button color="primary" size="lg" disabled>
-                  Table 1
-                </Button>{" "}
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat reserved"></div>
+              </Col>
+
+              <Row>
+                <Col>
+                  <Button color="primary" size="lg" disabled>
+                    Table 1
+                  </Button>{" "}
+                </Col>
+              </Row>
+              <Col>
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat"></div>
               </Col>
             </Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat"></div>
-            </Col>
-          </Row>
-        </Col>
-        
-        <Col>
-          <Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat reserved"></div>
-            </Col>
+          </Col>
 
+          <Col>
             <Row>
               <Col>
-                <Button color="warning" size="lg" disabled>
-                  Table 2
-                </Button>{" "}
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat reserved"></div>
+              </Col>
+
+              <Row>
+                <Col>
+                  <Button color="warning" size="lg" disabled>
+                    Table 2
+                  </Button>{" "}
+                </Col>
+              </Row>
+              <Col>
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat"></div>
               </Col>
             </Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat"></div>
-            </Col>
-          </Row>
-        </Col>
+          </Col>
         </Row>
         <hr />
 
         <Row>
-        <Col>
-          <Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat reserved"></div>
-            </Col>
-
+          <Col>
             <Row>
               <Col>
-                <Button color="danger" size="lg" disabled>
-                  Table 3
-                </Button>{" "}
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat reserved"></div>
+              </Col>
+
+              <Row>
+                <Col>
+                  <Button color="danger" size="lg" disabled>
+                    Table 3
+                  </Button>{" "}
+                </Col>
+              </Row>
+              <Col>
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat"></div>
               </Col>
             </Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat"></div>
-            </Col>
-          </Row>
-        </Col>
+          </Col>
 
-        <Col>
-          <Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat reserved"></div>
-            </Col>
-
+          <Col>
             <Row>
               <Col>
-                <Button color="success" size="lg" disabled>
-                  Table 4
-                </Button>{" "}
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat reserved"></div>
+              </Col>
+
+              <Row>
+                <Col>
+                  <Button color="success" size="lg" disabled>
+                    Table 4
+                  </Button>{" "}
+                </Col>
+              </Row>
+              <Col>
+                <div className="seat"></div>
+                <div className="seat"></div>
+                <div className="seat"></div>
               </Col>
             </Row>
-            <Col>
-              <div className="seat"></div>
-              <div className="seat"></div>
-              <div className="seat"></div>
-            </Col>
-          </Row>
-        </Col>
+          </Col>
         </Row>
-<hr/>
-    <ul class="info">
-        <li>
+        <hr />
+        <ul class="info">
+          <li>
             <div className="seat selected"></div>
             <small>Selected</small>
-        </li>
-        <li>
+          </li>
+          <li>
             <div className="seat"></div>
             <small>Available</small>
-        </li>
-        <li>
+          </li>
+          <li>
             <div className="seat reserved"></div>
             <small>Unavailable</small>
-        </li>
-    </ul>
-
-        
+          </li>
+        </ul>
       </Container>
     </div>
   );
