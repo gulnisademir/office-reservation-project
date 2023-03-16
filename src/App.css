@@ -10,13 +10,14 @@
 
 .auth-form-container,
 .login-form,
-.register-form {
+.register-form
+{
   display: flex;
   flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
-  .auth-form-container {
+  .auth-form-container,.box {
     padding: 5rem;
     border: 1px solid white;
     border-radius: 10px;
@@ -24,6 +25,7 @@
     box-shadow: 0px 0px 20px 10px #ffffff;
   }
 }
+
 
 label {
   text-align: left;
@@ -51,4 +53,48 @@ button {
   background: none;
   color: white;
   text-decoration: underline;
+}
+
+
+/* table */
+
+
+@media screen and (min-width: 600px) {
+  .box {
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 0.5rem;
+    box-shadow: 0px 0px 5px 1px #ffffff;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+.seat {
+  background-color: #444451;
+  height: 15px;
+  width: 15px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+
+
+.seat.selected {
+  background-color: #f6eb6f;
+}
+
+.seat.reserved {
+  background-color: #fff;
+}
+.col {
+  display: flex;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
 }
