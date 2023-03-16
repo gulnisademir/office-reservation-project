@@ -1,40 +1,14 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from 'reactstrap';
+import React from "react";
+import { Navbar } from "reactstrap";
 
 function Navi() {
-
   return (
     <div>
-   <Navbar
-    className="my-2"
-    color="dark"
-    dark
-  >
-    <NavbarBrand href="/">
-      <img
-        alt="logo"
-        src="/logo-white.svg"
-        style={{
-          height: 40,
-          width: 40
-        }}
-      />
-      Reactstrap
-    </NavbarBrand>
-  </Navbar>
+      <Navbar className="nav">
+       
+          <h4>Office Management App</h4>
+        
+      </Navbar>
     </div>
   );
 }

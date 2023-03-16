@@ -2,24 +2,40 @@ import React from "react";
 
 import {
   Button,
-  ButtonToolbar,
-  ButtonGroup,
   Container,
   Row,
   Col,
 } from "reactstrap";
 
+
+
+
 export default function Table() {
+
+  // const container = document.querySelector('.container');
+
+
+//   container.addEventListener('click', function(e) {
+//     if(e.target.classList.contains('seat') && !e.target.classList.contains('reserved')) {
+//         e.target.classList.toggle('selected');
+//         calculateTotal()     
+
+//         let selectedSeatCount = container.querySelectorAll('.seat.selected').length;
+//         console.log(selectedSeatCount);
+//      }
+//  });
+
+
   return (
-    <div class="box">
+    <div className="box2">
       <Container>
       <Row>
         <Col>
           <Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat reserved"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat reserved"></div>
             </Col>
 
             <Row>
@@ -30,9 +46,9 @@ export default function Table() {
               </Col>
             </Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
             </Col>
           </Row>
         </Col>
@@ -40,9 +56,9 @@ export default function Table() {
         <Col>
           <Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat reserved"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat reserved"></div>
             </Col>
 
             <Row>
@@ -53,9 +69,9 @@ export default function Table() {
               </Col>
             </Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
             </Col>
           </Row>
         </Col>
@@ -66,9 +82,9 @@ export default function Table() {
         <Col>
           <Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat reserved"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat reserved"></div>
             </Col>
 
             <Row>
@@ -79,9 +95,9 @@ export default function Table() {
               </Col>
             </Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
             </Col>
           </Row>
         </Col>
@@ -89,9 +105,9 @@ export default function Table() {
         <Col>
           <Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat reserved"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat reserved"></div>
             </Col>
 
             <Row>
@@ -102,9 +118,9 @@ export default function Table() {
               </Col>
             </Row>
             <Col>
-              <div class="seat"></div>
-              <div class="seat"></div>
-              <div class="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
+              <div className="seat"></div>
             </Col>
           </Row>
         </Col>
@@ -112,16 +128,16 @@ export default function Table() {
 <hr/>
     <ul class="info">
         <li>
-            <div class="seat selected"></div>
-            <small>Seçili</small>
+            <div className="seat selected"></div>
+            <small>Selected</small>
         </li>
         <li>
-            <div class="seat"></div>
-            <small>Boş</small>
+            <div className="seat"></div>
+            <small>Available</small>
         </li>
         <li>
-            <div class="seat reserved"></div>
-            <small>Dolu</small>
+            <div className="seat reserved"></div>
+            <small>Unavailable</small>
         </li>
     </ul>
 

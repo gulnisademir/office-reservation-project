@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row,Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 
 import "./App.css";
 import { Login } from "./components/Login";
@@ -23,23 +23,26 @@ function App() {
       ) : (
         <Register onFormSwitch={toggleForm} />
       )} */}
-
+  <Row>
+     
+<Navi />
       <Container>
-      <h2>Create New Reservation</h2>
+        
+
+        <h2>Create New Reservation</h2>
         {/* <Row>
           <Navi />
         </Row> */}
         <Row>
-          <Col xs="6">
-          <Table />
+          <Col >
+            <Table />
           </Col>
-          <Col xs="6">
-
+          <Col >
             <Reservation />
           </Col>
-          
         </Row>
       </Container>
+      </Row>   
     </div>
   );
 }
