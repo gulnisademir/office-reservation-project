@@ -62,9 +62,7 @@ button {
     border-radius: 10px;
     margin: 0.5rem;
     box-shadow: 0px 0px 5px 1px #ffffff;
-
     width: 350px;
-
     background: rgba(0, 0, 0, 0.1);
   }
   .box2 {
@@ -74,9 +72,7 @@ button {
     margin: 0.5rem;
     box-shadow: 0px 0px 5px 1px #ffffff;
     margin-left: 4rem;
-
     width: 350px;
-
     background: rgba(0, 0, 0, 0.1);
   }
 }
@@ -109,7 +105,6 @@ button {
   padding: 5px 10px;
   color: rgb(255, 251, 251);
   display: flex;
-
   justify-content: center;
 }
 
@@ -122,7 +117,6 @@ button {
 .nav {
   background: rgba(0, 0, 0, 0.4);
   border: 2px solid rgba(182, 118, 172, 0.5);
-
   filter: blur(0.3px);
 }
 .nav h4 {
