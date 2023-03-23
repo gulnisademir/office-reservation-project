@@ -6,8 +6,9 @@ import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 
 import Reservation from "./components/Reservation";
+import Table from "./components/Table";
 import Navi from "./components/Navi";
-import Table from "./components/Desk";
+import Desk from "./components/Desk";
 
 
 
@@ -27,14 +28,22 @@ function App() {
 
   return (
     <div className="App">
-    <BrowserRouter >
+  
+    
+   
+          
+     
+        <BrowserRouter >
     <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/create' element={<Create />}></Route>
         <Route path='/update/:id' element={<Update />}></Route>
         <Route path='/read/:id' element={<Read />}></Route>
     </Routes>
-</BrowserRouter>
+</BrowserRouter> 
+    
+    
+
 </div>
 
   );
