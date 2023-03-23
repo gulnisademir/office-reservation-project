@@ -7,7 +7,16 @@ import { Register } from "./components/Register";
 
 import Reservation from "./components/Reservation";
 import Navi from "./components/Navi";
-import Table from "./components/Table";
+import Table from "./components/Desk";
+
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Create from './components/office/Create'
+import Home from './components/office/Home'
+import Read from './components/office/Read'
+import Update from './components/office/Update'
+
 
 function App() {
   // const [currentForm, setCurrentForm] = useState("login");
@@ -18,32 +27,16 @@ function App() {
 
   return (
     <div className="App">
-      {/* {currentForm === "login" ? (
-        <Login onFormSwitch={toggleForm} />
-      ) : (
-        <Register onFormSwitch={toggleForm} />
-      )} */}
-  <Row>
-     
-<Navi />
-      <Container>
-        
+    <BrowserRouter >
+    <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/create' element={<Create />}></Route>
+        <Route path='/update/:id' element={<Update />}></Route>
+        <Route path='/read/:id' element={<Read />}></Route>
+    </Routes>
+</BrowserRouter>
+</div>
 
-        <h2>Create New Reservation</h2>
-        {/* <Row>
-          <Navi />
-        </Row> */}
-        <Row>
-          <Col >
-            <Table />
-          </Col>
-          <Col >
-            <Reservation />
-          </Col>
-        </Row>
-      </Container>
-      </Row>   
-    </div>
   );
 }
 

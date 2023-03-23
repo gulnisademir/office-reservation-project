@@ -1,0 +1,20 @@
+{
+  "offices": [
+    {
+      "id": "1",
+      "name": "bbbbbbb"
+    },
+    {
+      "id": "2",
+      "name": "xxxxxxx"
+    },
+    {
+      "id": "3",
+      "name": "yyyyyyy"
+    },
+    {
+      "id": "4",
+      "name": "aaaaaaa"
+    }
+  ]
+}

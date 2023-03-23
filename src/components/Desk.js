@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, Container, Row, Col } from "reactstrap";
 
-export default function Table() {
+export default function Desk() {
   // const container = document.querySelector('.container');
 
   //   container.addEventListener('click', function(e) {
