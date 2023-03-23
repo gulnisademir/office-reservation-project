@@ -33,26 +33,27 @@ function Update() {
 
 
   return (
-    <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
-        <div className='w-50 border bg-secondary text-white p-5'>
-            <form onSubmit={handleSubmit}>
+    
+        <div className='officeform'>
+            <form  onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="id">ID:</label>
                     <input type="number" disabled name='id' className='form-control' value={inputData.id}
                     />
                 </div>
+                <hr/>
                 <div>
                     <label htmlFor="name">Office Name:</label>
                     <input type="text" name='name' className='form-control' value={inputData.name}
                     onChange={e => setInputData({...inputData, name: e.target.value})}/>
                 </div>
                 <br />
-                <button className='btn btn-info'>Update</button>
-                <br />
-                <Link to="/">Back</Link>
+                <button className='btn border-white btn-info'>Update</button>
+                
+                <Link to="/"className='btn border-white btn-secondary mx-3'>Cancel</Link>
             </form>
         </div>
-    </div>
+    
   )
 }
 

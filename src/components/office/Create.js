@@ -29,9 +29,9 @@ function Create() {
                     onChange={e => setInputData({...inputData, name: e.target.value})}/>
                 </div>
                 <br />
-                <button className='btn text-white btn-info'>Create</button>
+                <button className='btn border-white btn-info'>Create</button>
                 
-                <Link to="/"className='btn btn-secondary mx-1'>Cancel</Link>
+                <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </form>
         </div>
     

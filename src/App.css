@@ -10,7 +10,7 @@
 
 .auth-form-container,
 .login-form,
-.register-form
+.register-form,.officeform
 {
   display: flex;
   flex-direction: column;
@@ -148,5 +148,8 @@ button {
     width: 350px;
     background: rgba(0, 0, 0, 0.2);
   }
-
+label,h2,td,th{
+  font-style: italic;
+  color: #ffffff;
+}
 }

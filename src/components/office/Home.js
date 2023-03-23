@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className='officeform '>
         <h2>Offices</h2>
-        <Link to="/create" className='btn btn-secondary my-3'>Create Office +</Link>
+        <Link to="/create" className='btn border-white btn-secondary my-3'>Create Office +</Link>
         <table className='table'>
             <thead>
                 <tr>
@@ -34,9 +34,9 @@ function Home() {
                         <td>{d.name}</td>
                         
                         <td>
-                            <Link className='text-decoration-none btn btn-sm btn-success' to={`/update/${d.id}`}>Update</Link>
-                            <button className='text-decoration-none btn btn-sm btn-danger' onClick={e => handleDelete(d.id)}>Delete</button>
-                            <Link className='text-decoration-none btn btn-sm btn-primary' to={`/read/${d.id}`}>Read</Link>
+                            <Link className='text-decoration-none btn  border-white btn-sm btn-success mx-1' to={`/update/${d.id}`}>Update</Link>
+                            <button className='text-decoration-none btn border-white btn-sm btn-danger mx-1' onClick={e => handleDelete(d.id)}>Delete</button>
+                            <Link className='text-decoration-none btn border-white btn-sm btn-primary mx-1' to={`/read/${d.id}`}>Read</Link>
                         </td>
                     </tr>
                 ))}

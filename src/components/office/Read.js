@@ -19,11 +19,16 @@ function Read() {
   return (
    
         
-            <div className='container '>
-            <p>ID {Data.id}</p>
-            <p>Office Name {Data.name}</p>
-            
-            <Link to="/">Back</Link>
+            <div className='officeform '>
+                <label htmlFor="id">Office ID</label>
+                <input type="text" value={Data.id} disabled/>
+            {/* <p>{Data.id}</p> */}
+            <hr/>
+            <label htmlFor="officename">Office Name</label>
+            {/* <p>{Data.name}</p> */}
+            <input type="text" value={Data.name} disabled/>
+            <hr/>
+            <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </div>
     
   )
