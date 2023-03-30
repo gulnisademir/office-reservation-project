@@ -5,29 +5,29 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 
 
-function Update() {
+function Update2() {
 
     const {_id} = useParams();
 
     const [inputData, setInputData] = useState({
-        id:_id,
         name: '',
-        organization:'',
-        createdAt: '',
-        updatedAt: ''
+        _id: '',      
+  office: '',
+  createdAt: '',
+  updatedAt: ''
         
     })
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/offices/'+_id)
+        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/desks/'+_id)
         .then(res => setInputData(res.data))
         .catch(err => console.log(err))
     }, [])
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/offices/'+_id , inputData)
+        axios.put('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/desks/'+_id , inputData)
         .then(res => {
             alert("Data Updated Successfully!")
             navigate('/')
@@ -40,15 +40,15 @@ function Update() {
         <div className='officeform'>
             <form  onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="name">Office Name:</label>
+                    <label htmlFor="name">Desk Name:</label>
                     <input type="text" className='form-control' value={inputData.name}
                     onChange={e => setInputData({...inputData, name: e.target.value})}/>
                 </div>
                 <hr/>
                 <div>
-                    <label htmlFor="organization">Organization:</label>
-                    <input type="text" name='organization' className='form-control' value={inputData.organization}
-                    onChange={e => setInputData({...inputData, organization: e.target.value})}/>
+                    <label htmlFor="office">Office Name:</label>
+                    <input type="text" name='office' className='form-control' value={inputData.office}
+                    onChange={e => setInputData({...inputData, office: e.target.value})}/>
                 </div>
                 <br />
                 <button className='btn border-white btn-info'>Update</button>
@@ -60,4 +60,4 @@ function Update() {
   )
 }
 
-export default Update
+export default Update2

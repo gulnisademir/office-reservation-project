@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 
 
-function Read() {
+function Read3() {
     const {id} = useParams()
     const navigate = useNavigate()
     const [Data, setdata] = useState([])
 
     useEffect(() => {
-        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/offices/'+id)
+        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/organizations/'+id)
         .then(res => setdata(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -35,4 +35,4 @@ function Read() {
   )
 }
 
-export default Read
+export default Read3

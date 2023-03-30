@@ -5,14 +5,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 
-
-function Read() {
+function Read2() {
     const {id} = useParams()
     const navigate = useNavigate()
     const [Data, setdata] = useState([])
 
     useEffect(() => {
-        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/offices/'+id)
+        axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/desks/' +id)
         .then(res => setdata(res.data))
         .catch(err => console.log(err))
     }, [])
@@ -21,13 +20,13 @@ function Read() {
    
         
             <div className='officeform '>
-                <label htmlFor="id">Office ID</label>
-                <input type="text" value={Data._id} disabled/>
+                <label htmlFor="name">Desk Name:</label>
+                <input type="text" value={Data.name} disabled/>
           
             <hr/>
-            <label htmlFor="officename">Office Name</label>
+            <label htmlFor="officename">Office Name:</label>
             
-            <input type="text" value={Data.name} disabled/>
+            <input type="text" value={Data.office} disabled/>
             <hr/>
             <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </div>
@@ -35,4 +34,4 @@ function Read() {
   )
 }
 
-export default Read
+export default Read2
