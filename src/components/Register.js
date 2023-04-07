@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
 
 
 export const Register = (props) => {
@@ -53,11 +54,15 @@ export const Register = (props) => {
           id="password"
           name="password"
         />
-        <button type="submit">Sign Up</button>
+        <br/>
+        <button type="submit" className="btn btn-primary">Sign Up</button> 
+        {/* <button type="submit">Sign Up</button> */}
       </form>
-      <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
+      {/* <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account? Login here.
-      </button>
+      </button> */}
+      <hr/>
+      <Link className="btn btn-success" to={'/login'}>Already have an account? Login here</Link>
     </div>
   );
 };

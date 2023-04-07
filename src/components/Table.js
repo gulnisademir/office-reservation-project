@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button, Container, Row, Col } from "reactstrap";
 
-export default function Table() {
+ function Table() {
   // const container = document.querySelector('.container');
 
   //   container.addEventListener('click', function(e) {
@@ -17,7 +17,7 @@ export default function Table() {
 
   return (
     <div className="box2">
-      <Container>
+     
         <Row>
           <Col>
             <Row>
@@ -129,7 +129,7 @@ export default function Table() {
             <small>Unavailable</small>
           </li>
         </ul>
-      </Container>
+      
     </div>
   );
-}
+}export default Table

@@ -1,14 +1,23 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { ToastContainer } from "react-toastify";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './App.css';
+
+import "./App.css";
+import "./components/Navbar.css";
+
+//LOG
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 
 import Reservation from "./components/Reservation";
 import Table from "./components/Table";
-import Navbar from "./components/navbar/MenuItems";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Reservationarea from "./components/Reservationarea";
+
+//NAVBAR
+import Navbar from "./components/Navbar"
+
+
 
 // OFFİCE
 import Create from "./components/office/Create";
@@ -30,27 +39,53 @@ import Update3 from "./components/organization/Update3";
 
 
 
-
 function App() {
-  // const [currentForm, setCurrentForm] = useState("login");
+  const [currentForm, setCurrentForm] = useState("login");
 
-  // const toggleForm = (formName) => {
-  //   setCurrentForm(formName);
-  // };
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  };
 
   return (
-    <div className="App">
-      <BrowserRouter>
+     <BrowserRouter>
+     <ToastContainer></ToastContainer>
+     <Navbar />
+     <div className="App">
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/create" element={<Create/>}></Route>
+        <Route path="/" element={<Login />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/create" element={<Create />}></Route>
           <Route path="/update/:id" element={<Update />}></Route>
           <Route path="/read/:id" element={<Read />}></Route>
+
+
+          <Route path="/home2" element={<Home2 />}></Route>
+          <Route path="/create2" element={<Create2 />}></Route>
+          <Route path="/update2/:id" element={<Update2 />}></Route>
+          <Route path="/read2/:id" element={<Read2 />}></Route>
+
+          <Route path="/home3" element={<Home3 />}></Route>
+          <Route path="/create3" element={<Create3 />}></Route>
+          <Route path="/update3/:id" element={<Update3 />}></Route>
+          <Route path="/read3/:id" element={<Read3 />}></Route>
+
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/register" element={<Register />}></Route>
+
+          <Route path="/reservationarea " element={<Reservationarea />}></Route>
+          <Route path="/table" element={<Table/>}></Route>
+          <Route path="/reservation" element={<Reservation/>}></Route>
+
         </Routes>
+
+        
+        </div>
       </BrowserRouter>
 
-      {/* <Navbar/> */}
-    </div>
+    // <div>
+    //  <Reservationarea/>
+    // </div>
+    
   );
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Row, Col, Label, Input, Button, FormGroup, Form } from "reactstrap";
 
-export default function Reservation() {
+function Reservation() {
   const [start, setStart] = useState("");
   const [starttime, setStarttime] = useState("");
   const [end, setEnd] = useState("");
@@ -105,3 +105,4 @@ export default function Reservation() {
     </div>
   );
 }
+export default Reservation
