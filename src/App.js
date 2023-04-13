@@ -40,11 +40,11 @@ import Update3 from "./components/organization/Update3";
 
 
 function App() {
-  const [currentForm, setCurrentForm] = useState("login");
+  // const [currentForm, setCurrentForm] = useState("login");
 
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  };
+  // const toggleForm = (formName) => {
+  //   setCurrentForm(formName);
+  // };
 
   return (
      <BrowserRouter>
@@ -72,7 +72,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register />}></Route>
 
-          <Route path="/reservationarea " element={<Reservationarea />}></Route>
+          <Route path="/reservationarea" element={<Reservationarea />}></Route>
           <Route path="/table" element={<Table/>}></Route>
           <Route path="/reservation" element={<Reservation/>}></Route>
 

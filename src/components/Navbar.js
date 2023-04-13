@@ -12,7 +12,7 @@ export default function Navbar() {
         <CustomLink to="/home">Office</CustomLink>
         <CustomLink to="/home3">Organization</CustomLink>
         <CustomLink to="/home2">Desk</CustomLink>
-        <CustomLink to="./Reservationarea.js">Reservation</CustomLink>
+        <CustomLink to="./reservation">Reservation</CustomLink>
 
 
         <CustomLink to="/Login" style={{

@@ -1,39 +1,65 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
-
-export const Register = (props) => {
+export const Register = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [username, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const navigation = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
+    // console.log(email);
+
+    try {
+      await axios.post(
+        "http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users",
+        payload
+      );
+    
+      navigation("/Login");
+    } catch (error) {
+      return error;
+    }
+  };
+
+ 
+
+  //   const config = {
+  //     headers: { Authorization: `Bearer ${token}` }
+  // };
+
+  const payload = {
+    email: email,
+
+    password: password,
+    firstName: firstName,
+
+    lastName: lastName,
   };
 
   return (
     <div className="auth-form-container">
       <h2>Register</h2>
-      <form className="register-form" onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+      <form className="register-form" onSubmit={(e) => handleSubmit(e)}>
+        <label htmlFor="firstName">First Name</label>
         <input
-          value={username}
-          name="username"
-          onChange={(e) => setName(e.target.value)}
-          id="username"
-          placeholder="Username"
+          value={firstName}
+          name="firstName"
+          onChange={(e) => setFirstName(e.target.value)}
+          id="firstName"
+          placeholder="firstName"
         />
 
-        <label htmlFor="number">Phone Number</label>
+        <label htmlFor="lastName">First Name</label>
         <input
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-          type="text"
-          placeholder="(___)___-_____ "
-          id="number"
-          name="number"
+          value={lastName}
+          name="lastName"
+          onChange={(e) => setLastName(e.target.value)}
+          id="lastName"
+          placeholder="lastName"
         />
 
         <label htmlFor="email">Email</label>
@@ -47,22 +73,23 @@ export const Register = (props) => {
         />
         <label htmlFor="password">Password</label>
         <input
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="*************"
           id="password"
           name="password"
         />
-        <br/>
-        <button type="submit" className="btn btn-primary">Sign Up</button> 
-        {/* <button type="submit">Sign Up</button> */}
+        <br />
+        <button type="submit" className="btn btn-primary">
+          Sign Up
+        </button>
       </form>
-      {/* <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
-        Already have an account? Login here.
-      </button> */}
-      <hr/>
-      <Link className="btn btn-success" to={'/login'}>Already have an account? Login here</Link>
+
+      <hr />
+      <Link className="btn btn-success" to={"/login"}>
+        Already have an account? Login here
+      </Link>
     </div>
   );
 };
