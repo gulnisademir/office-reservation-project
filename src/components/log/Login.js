@@ -1,66 +1,58 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 
-export const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const navigation = useNavigate();
+export class Login extends Component {
+  
 
+  handleSubmit = e=> {
+    e.preventDefault();
 
-  const payload = {
-    email: email,
-    password: password,
+    const data = {
+      
+      email: this.email,
+      password: this.password,
+    };
+
+    axios.post(
+      'http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/sessions',data)
+      .then(res=>{
+          localStorage.setItem('accessToken', res.data.accessToken);
+        }
+      ).catch(
+        err=>{
+          console.log(err);
+        }
+      )
     
   };
 
 
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-   
-
-    try {
-      const res = await axios.post(
-        "http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/sessions",
-        payload
-      );
-      localStorage.setItem('accessToken',res?.data?.accessToken);
-      navigation("/HomePage");
-    } catch (error) {
-      return error;
-    }
-
-  };
-
- 
-
-  return (
-    <div className="auth-form-container">
+  render() {
+    return (
+      <div className="auth-form-container">
       <h2>Login</h2>
-      <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="email">
+      <form className="login-form" onSubmit= {this.handleSubmit}>
+        <label>
           Email <span className="errmsg">*</span>
         </label>
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+         
+          onChange={e => (this.email = e.target.value)}
           type="email"
           placeholder="example@gmail.com"
-          id="email"
-          name="email"
+          
         />
-        <label htmlFor="password">
+        <label >
           Password<span className="errmsg">*</span>
         </label>
         <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+         
+          onChange={e => (this.password = e.target.value)}
           type="password"
           placeholder="*************"
-          id="password"
-          name="password"
+         
         />
         <br />
         <button type="submit" className="btn btn-primary">
@@ -75,5 +67,6 @@ export const Login = () => {
 
       <button className="link-btn">Did you forget your password?</button>
     </div>
-  );
-};
+    )
+  }
+}

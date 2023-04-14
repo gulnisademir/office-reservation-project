@@ -1,80 +1,73 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import { Component } from 'react'
 
-export const Register = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const navigation = useNavigate();
-
-  const handleSubmit = async (e) => {
+export class Register extends Component {
+  
+  handleSubmit = e=> {
     e.preventDefault();
-    // console.log(email);
 
-    try {
-      await axios.post(
-        "http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users",
-        payload
-      );
+    const data = {
+      first_name: this.firstName,
+      last_name: this.lastName,
+      email: this.email,
+      password: this.password,
+    };
+
+    // console.log(data);
+
     
-      navigation("/login");
-    } catch (error) {
-      return error;
-    }
+      axios.post(
+        'http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users',data).then(
+          res=>{console.log(res)
+          }
+        ).catch(
+          err=>{
+            console.log(err);
+          }
+        )
   };
 
- 
-  const payload = {
-    email: email,
 
-    password: password,
-    firstName: firstName,
 
-    lastName: lastName,
-  };
-
-  return (
-    <div className="auth-form-container">
+  render() {
+    return (
+      <div className="auth-form-container">
       <h2>Register</h2>
-      <form className="register-form" onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="firstName">First Name</label>
-        <input
-          value={firstName}
-          name="firstName"
-          onChange={(e) => setFirstName(e.target.value)}
-          id="firstName"
+      <form className="register-form" onSubmit= {this.handleSubmit}>
+        <label>First Name</label>
+        <input       
+          type="text"
+          onChange={e=> (this.firstName = e.target.value)}
           placeholder="firstName"
         />
 
-        <label htmlFor="lastName">First Name</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
-          value={lastName}
-          name="lastName"
-          onChange={(e) => setLastName(e.target.value)}
-          id="lastName"
+           type="text"
+          
+          onChange={e => (this.lastName = e.target.value)}
+         
           placeholder="lastName"
         />
 
         <label htmlFor="email">Email</label>
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
+         type="email"
+          onChange={e => (this.email = e.target.value)}
+        
           placeholder="example@gmail.com"
-          id="email"
-          name="email"
+          
         />
         <label htmlFor="password">Password</label>
         <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+       
+          onChange={e => (this.password = e.target.value)}
           type="password"
           placeholder="*************"
-          id="password"
-          name="password"
+        
         />
         <br />
         <button type="submit" className="btn btn-primary">
@@ -87,5 +80,6 @@ export const Register = () => {
         Already have an account? Login here
       </Link>
     </div>
-  );
-};
+    )
+  }
+}
