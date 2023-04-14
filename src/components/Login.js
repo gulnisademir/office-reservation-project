@@ -23,7 +23,7 @@ export const Login = () => {
         "http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/sessions",
         payload
       );
-      localStorage.setItem('token',res?.data?.token);
+      localStorage.setItem('accessToken',res?.data?.accessToken);
       navigation("/HomePage");
     } catch (error) {
       return error;

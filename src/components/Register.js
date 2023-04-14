@@ -7,6 +7,7 @@ export const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const navigation = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -19,18 +20,13 @@ export const Register = () => {
         payload
       );
     
-      navigation("/Login");
+      navigation("/login");
     } catch (error) {
       return error;
     }
   };
 
  
-
-  //   const config = {
-  //     headers: { Authorization: `Bearer ${token}` }
-  // };
-
   const payload = {
     email: email,
 

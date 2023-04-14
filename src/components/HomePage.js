@@ -3,7 +3,7 @@ import jwt_decode from "jwt-decode";
 
 export const HomePage = () => {
 
-    const userToken =  localStorage.getItem('token');
+    const userToken =  localStorage.getItem('accessToken');
     var data = jwt_decode(userToken);
   var firstName=data.user.firstName;
   
