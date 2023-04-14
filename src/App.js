@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer } from "react-toastify";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -7,9 +7,11 @@ import "./App.css";
 import "./components/Navbar.css";
 
 //LOG
-import { Login } from "./components/Login";
-import { Register } from "./components/Register";
+import { Login } from "./components/log/Login";
+import { Register } from "./components/log/Register";
+import { HomePage } from "./components/log/HomePage";
 
+//Reservation
 import Reservation from "./components/Reservation";
 import Table from "./components/Table";
 import Reservationarea from "./components/Reservationarea";
@@ -48,7 +50,7 @@ function App() {
 
   return (
      <BrowserRouter>
-     <ToastContainer></ToastContainer>
+    
      <Navbar />
      <div className="App">
         <Routes>
