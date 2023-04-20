@@ -30,7 +30,7 @@ function Update() {
         axios.put('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/offices/'+_id , inputData)
         .then(res => {
             alert("Data Updated Successfully!")
-            navigate('/')
+            navigate('/home')
         })
     }
 
@@ -53,7 +53,7 @@ function Update() {
                 <br />
                 <button className='btn border-white btn-info'>Update</button>
                 
-                <Link to="/"className='btn border-white btn-secondary mx-3'>Cancel</Link>
+                <Link to="/home"className='btn border-white btn-secondary mx-3'>Cancel</Link>
             </form>
         </div>
     

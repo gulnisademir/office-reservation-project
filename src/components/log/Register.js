@@ -16,7 +16,25 @@ export class Register extends Component {
       password: this.password,
     };
 
-    // console.log(data);
+   
+
+  //   const data=()=>{
+  //     axios.post('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users',{
+  //       email: "john.doe@example.com",
+  // firstName: "John",
+  // password: "password",
+  // passwordConfirmation: "password",
+  // lastName: "Doe",
+  // role: "USER",
+  // organization: "string"
+  //     })
+  //     .then((response)=>{
+  //       console.log(response);
+  //     })
+  //     .ctach((error)=>{
+  //       console.log(error,error.response);
+  //     });
+  //   };
 
     
       axios.post(
@@ -69,6 +87,7 @@ export class Register extends Component {
           placeholder="*************"
         
         />
+        
         <br />
         <button type="submit" className="btn btn-primary">
           Sign Up

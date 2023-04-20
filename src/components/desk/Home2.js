@@ -52,7 +52,7 @@ function Home2() {
         axios.delete('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/desks/'+_id)
         .then(res => {
             alert("Record Deleted");
-            navigate('/')
+            navigate('/home2')
         })
     }
   }

@@ -29,7 +29,7 @@ function Read() {
             
             <input type="text" value={Data.name} disabled/>
             <hr/>
-            <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
+            <Link to="/home"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </div>
     
   )

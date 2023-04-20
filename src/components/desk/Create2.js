@@ -21,7 +21,7 @@ function Create2() {
         axios.post('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/desks', inputData)
         .then(res => {
             alert("Data Posted Successfully!")
-            navigate('/')
+            navigate('/home2')
         })
     }
   return (
@@ -44,7 +44,7 @@ function Create2() {
                 <br />
                 <button className='btn border-white btn-info'>Create</button>
                 
-                <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
+                <Link to="/home2"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </form>
         </div>
     

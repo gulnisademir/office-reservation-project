@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from "axios";
 
 
-export class HomePage extends Component {
+export class Homepage extends Component {
   state={};
   
   componentDidMount(){
@@ -34,7 +34,7 @@ export class HomePage extends Component {
       )
     }
     return (
-      <h2> You Are Logget In</h2>
+      <h2>This is home page</h2>
     )
   }
 }

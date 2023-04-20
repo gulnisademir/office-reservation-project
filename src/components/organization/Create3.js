@@ -20,7 +20,7 @@ function Create3() {
         axios.post('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/organizations', inputData)
         .then(res => {
             alert("Data Posted Successfully!")
-            navigate('/')
+            navigate('/home3')
         })
     }
   return (
@@ -41,7 +41,7 @@ function Create3() {
                 <br />
                 <button className='btn border-white btn-info'>Create Organization</button>
                 
-                <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
+                <Link to="/home3"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </form>
         </div>
     

@@ -28,7 +28,7 @@ function Read2() {
             
             <input type="text" value={Data.office} disabled/>
             <hr/>
-            <Link to="/"className='btn border-white btn-secondary mx-1'>Cancel</Link>
+            <Link to="/home2"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </div>
     
   )

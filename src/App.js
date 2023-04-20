@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 import "./App.css";
-import "./components/Navbar.css";
+
 
 //LOG
 import { Login } from "./components/log/Login";
 import { Register } from "./components/log/Register";
-import { HomePage } from "./components/log/HomePage";
+import { Homepage } from "./components/log/Homepage";
 
 //Reservation
-import Reservation from "./components/Reservation";
-import Table from "./components/Table";
-import Reservationarea from "./components/Reservationarea";
+import Reservation from "./components/reservation/Reservation";
 
 //NAVBAR
 import Navbar from "./components/Navbar"
@@ -54,8 +52,9 @@ function App() {
      <Navbar />
      <div className="App">
         <Routes>
+        <Route path="/" element={<Login />}></Route>
 
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/homepage" element={<Homepage />}></Route>
        
           <Route path="/home" element={<Home />}></Route>
           <Route path="/create" element={<Create />}></Route>
@@ -76,8 +75,6 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/register" element={<Register />}></Route>
 
-          <Route path="/reservationarea" element={<Reservationarea />}></Route>
-          <Route path="/table" element={<Table/>}></Route>
           <Route path="/reservation" element={<Reservation/>}></Route>
 
         </Routes>

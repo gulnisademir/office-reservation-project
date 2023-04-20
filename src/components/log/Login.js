@@ -4,7 +4,6 @@ import axios from "axios";
 
 
 export class Login extends Component {
-  
 
   handleSubmit = e=> {
     e.preventDefault();
@@ -35,7 +34,7 @@ export class Login extends Component {
       <h2>Login</h2>
       <form className="login-form" onSubmit= {this.handleSubmit}>
         <label>
-          Email <span className="errmsg">*</span>
+          Email<span className="errmsg">*</span>
         </label>
         <input
          
@@ -50,6 +49,7 @@ export class Login extends Component {
         <input
          
           onChange={e => (this.password = e.target.value)}
+          
           type="password"
           placeholder="*************"
          

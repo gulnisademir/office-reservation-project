@@ -18,7 +18,7 @@ function Home3() {
   return (
     <div className='officeform '>
         <h2>Organization</h2>
-        <Link to="/create" className='btn border-white btn-secondary my-3'>Create Organization +</Link>
+        <Link to="/create3" className='btn border-white btn-secondary my-3'>Create Organization +</Link>
         <table className='table'>
             <thead>
                 <tr>
@@ -52,7 +52,7 @@ function Home3() {
         axios.delete('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/organizations/'+_id)
         .then(res => {
             alert("Record Deleted");
-            navigate('/')
+            navigate('/home3')
         })
     }
   }

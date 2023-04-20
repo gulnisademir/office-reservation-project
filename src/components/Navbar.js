@@ -1,9 +1,12 @@
+import React from "react";
+
+
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default function Navbar() {
   return (
     <nav className="nav">
-      <Link to="/" className="site-title" style={{
+      <Link to="/homepage" className="site-title" style={{
               fontStyle:"italic"
             }} >
       Office Management App
@@ -18,6 +21,7 @@ export default function Navbar() {
         <CustomLink to="/Login" style={{
               backgroundColor: " #63626b",
               border: "1px white solid"
+              
             }}>SIGN IN</CustomLink>
         <CustomLink to="/Register"style={{
               backgroundColor: " #63626b",
@@ -41,10 +45,8 @@ function CustomLink({ to, children, ...props }) {
   )
 }
 
-
-
 // import React, { useState } from "react";
-// import "../navbar.css";
+
 
 // function Navbar() {
 //   const [active, setActive] = useState("nav__menu");
@@ -62,7 +64,7 @@ function CustomLink({ to, children, ...props }) {
 //   return (
 //     <nav className="nav">
 //       <a href="#" className="nav__brand">
-//         herdoy
+//         OFFİCE RESERVASİON
 //       </a>
 //       <ul className={active}>
 //         <li className="nav__item">
