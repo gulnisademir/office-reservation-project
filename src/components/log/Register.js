@@ -56,32 +56,33 @@ export class Register extends Component {
       <h2>Register</h2>
       <form className="register-form" onSubmit= {this.handleSubmit}>
         <label>First Name</label>
-        <input       
+        <input    
+         className="form-control"   
           type="text"
           onChange={e=> (this.firstName = e.target.value)}
-          placeholder="firstName"
+          placeholder="First Name"
         />
 
         <label htmlFor="lastName">Last Name</label>
         <input
            type="text"
-          
+           className="form-control"
           onChange={e => (this.lastName = e.target.value)}
+          placeholder="Last Name"
          
-          placeholder="lastName"
         />
 
         <label htmlFor="email">Email</label>
         <input
          type="email"
           onChange={e => (this.email = e.target.value)}
-        
+          className="form-control"
           placeholder="example@gmail.com"
           
         />
         <label htmlFor="password">Password</label>
         <input
-       
+       className="form-control"
           onChange={e => (this.password = e.target.value)}
           type="password"
           placeholder="*************"

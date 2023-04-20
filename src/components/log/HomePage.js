@@ -16,7 +16,7 @@ export class Homepage extends Component {
     axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users/me',config).then(
       res=>{
         this.setState({
-          user: res.data
+          me: res.data
         });
       },
     
@@ -27,10 +27,10 @@ export class Homepage extends Component {
   }
 
   render() {
-    if(this.state.user){
+    if(this.state.me){
       return(
 
-        <h2>Welcome {this.state.user.first_name} {this.state.user.last_name} </h2>
+        <h2>Welcome {this.state.me.first_name} {this.state.me.last_name} </h2>
       )
     }
     return (
