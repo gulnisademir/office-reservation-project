@@ -30,7 +30,7 @@ function Home2() {
             <tbody>
                 {data.map((d, i)=> (
                     <tr key={i}>
-                        <td>{d.office[1]}</td>
+                        <td>{d.office.name}</td>
                         <td>{d.name}</td>
                         
                         <td>

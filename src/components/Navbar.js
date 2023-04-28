@@ -19,14 +19,21 @@ export default function Navbar() {
 
 
         <CustomLink to="/Login" style={{
-              backgroundColor: " #63626b",
-              border: "1px white solid"
+              backgroundColor: " #30223b",
+              border: "1px white solid","border-radius": "10px"
               
-            }}>SIGN IN</CustomLink>
+            }}>  <i class="fa-solid fa-user"style={{
+              margin:"5px"
+              
+            }} ></i>SIGN IN</CustomLink>
+
         <CustomLink to="/Register"style={{
-              backgroundColor: " #63626b",
-              border: "1px white solid"
-            }}>SIGN UP</CustomLink>
+              backgroundColor: "#30223b",
+              border: "1px white solid", "border-radius": "10px"
+            }}><i class="fa-solid fa-user-plus"  style={{
+              margin:"5px"
+              
+            }} ></i> SIGN UP </CustomLink>
       </ul>
     </nav>
   )

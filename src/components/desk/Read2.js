@@ -26,7 +26,7 @@ function Read2() {
             <hr/>
             <label htmlFor="officename">Office Name:</label>
             
-            <input type="text" value={Data.office} disabled/>
+            <input type="text" value={Data.office.name} disabled/>
             <hr/>
             <Link to="/home2"className='btn border-white btn-secondary mx-1'>Cancel</Link>
             </div>
