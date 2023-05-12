@@ -7,13 +7,13 @@ export class Homepage extends Component {
   
   componentDidMount(){
 
-    const config = {
-      headers: { 
-        Authorization: 'Bearer' + localStorage.getItem('accessToken')
-       }
-  };
+  //   const config = {
+  //     headers: { 
+  //       Authorization: 'Bearer' + localStorage.getItem('accessToken')
+  //      }
+  // };
   
-    axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users/me',config).then(
+    axios.get('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users/me').then(
       res=>{
         this.setState({
           me: res.data
@@ -30,7 +30,7 @@ export class Homepage extends Component {
     if(this.state.me){
       return(
 
-        <h2>Welcome {this.state.me.first_name} {this.state.me.last_name} </h2>
+        <h2>Welcome {this.state.me.firstName} {this.state.me.lastName} </h2>
       )
     }
     return (
