@@ -17,24 +17,6 @@ export class Register extends Component {
       organization: this.organization,
     };
 
-    //   const data=()=>{
-    //     axios.post('http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users',{
-    //       email: "john.doe@example.com",
-    // firstName: "John",
-    // password: "password",
-    // passwordConfirmation: "password",
-    // lastName: "Doe",
-    // role: "USER",
-    // organization: "string"
-    //     })
-    //     .then((response)=>{
-    //       console.log(response);
-    //     })
-    //     .ctach((error)=>{
-    //       console.log(error,error.response);
-    //     });
-    //   };
-
     axios
       .post(
         "http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/users",
@@ -121,3 +103,4 @@ export class Register extends Component {
     );
   }
 }
+

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import { Navigate } from "react-router-dom";
 
 export class Login extends Component {
+  state={}
+
   handleSubmit = e=> {
     e.preventDefault();
 
@@ -17,6 +19,11 @@ export class Login extends Component {
       'http://ec2-34-212-0-127.us-west-2.compute.amazonaws.com:3000/api/sessions',data)
       .then(res=>{
           localStorage.setItem('accessToken', res.data.accessToken);
+          this.setState({
+            loggedIn:true
+          });
+          
+          this.props.setUser(res.data.user);
         }
       ).catch(
         err=>{
@@ -26,8 +33,10 @@ export class Login extends Component {
     
   };
 
-
   render() {
+    if(this.state.loggedIn){
+      return <Navigate to={'/'}/>;
+    }
     return (
       <div className="auth-form-container">
       <h2>Login</h2>
